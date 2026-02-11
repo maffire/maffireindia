@@ -5415,7 +5415,7 @@ Section Title
 .banner-section .arry {
   position: absolute;
   top: 33%;
-  left: 5%;
+  left: 25%;
   z-index: 2;
 }
 .banner-section .goBottom-btn {
@@ -5764,9 +5764,11 @@ Section Title
 .banner-section-three .arry {
   position: absolute;
   top: 25%;
-  left: 5%;
+  right: 25%;
   z-index: 0;
 }
+
+
 @media (max-width: 1599.98px) {
   .banner-section-three .arry {
     display: none;
