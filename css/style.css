@@ -980,49 +980,7 @@ Scroll To Top style
 }
 
 /* --- Image Layout --- */
-.about-image-wrapper {
-    position: relative;
-    padding-bottom: 50px;
-}
 
-.main-image img {
-    width: 90%;
-    transition: transform 0.4s ease;
-}
-
-.floating-ceo {
-    position: absolute;
-    bottom: 0;
-    right: -25px;
-    width: 250px;
-    border: 8px solid #fff;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
-.experience-badge {
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
-    background: #e63946;
-    color: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    line-height: 1;
-}
-
-.experience-badge span { font-size: 1.5rem; font-weight: 800; display: block; }
-.experience-badge p { font-size: 0.7rem; margin: 0; text-transform: uppercase; }
-
-/* --- Feature List --- */
-.feature-list li {
-    margin-bottom: 10px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
 /* --- Modern Button --- */
 .custom-btn {
@@ -1043,19 +1001,6 @@ Scroll To Top style
     color: #fff;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 991px) {
-    .about-image-wrapper {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .main-image img { width: 100%; }
-    .floating-ceo {
-        width: 180px;
-        right: -10px;
-    }
-    .sec-title h2 { font-size: 2rem; }
-}
 
 
 
@@ -1075,52 +1020,95 @@ Scroll To Top style
 }
 
 
-/* Replaces #ceo-image:after */
-.name-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
 
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.8)
-  );
-
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: pre-line;
-
-  /* Hide by default */
-  opacity: 0;
-  z-index: 10;
-  transition: all 0.4s ease;
-  pointer-events: none; /* Allows clicks to pass through to the image if needed */
+/* Updated to MAF Red Accent */
+.maf-v2 {
+    font-family: 'Outfit', sans-serif;
+    background: #111418; 
+    color: #ffffff;
 }
 
-/* Show on hover */
-#ceo-image:hover .name-overlay {
-  opacity: 1;
+.maf-v2 .sec-title .title {
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    /* Changed to MAF Red */
+    padding-left: 20px;
+    margin-bottom: 70px;
 }
 
-/* Hover Effects */
-.overlay-anim:hover:before {
-  height: 100%;
-  opacity: 0;
+.maf-v2 .nav-link {
+    color: #aaa;
+    background: transparent;
+    border-radius: 0;
+    padding: 20px;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.4s ease;
 }
 
-#ceo-image:hover:after {
-  opacity: 1;
+/* Active State changed to Red */
+.maf-v2 .nav-link.active {
+    background: rgba(217, 35, 45, 0.1) !important;
+    color: #d9232d !important;
+    border-right: 3px solid #d9232d;
 }
+
+.maf-v2 .nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Icons in list items changed to Red */
+.maf-v2 .list-item i {
+    color: #d9232d;
+    margin-right: 15px;
+}
+
+/* Commitment Icon changed to Red */
+    .maf-v2 .text-warning {
+        color: #d9232d !important;
+    }
+
+    /* Content Area */
+    .maf-v2 .tab-content {
+        padding: 40px;
+        background: rgba(255,255,255,0.03);
+        border-radius: 0 20px 20px 0;
+        min-height: 450px;
+    }
+
+    .maf-v2 .list-item {
+        background: rgba(255,255,255,0.05);
+        margin-bottom: 10px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .maf-v2 .list-item:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateX(10px);
+    }
+
+    .maf-v2 .list-item i {
+        color: #d9232d;
+        margin-right: 15px;
+    }
+
+    .maf-v2 .content-box .text {
+        color: #ccc;
+        line-height: 1.8;
+        font-size: 14px;
+    }
+
+    @media (max-width: 991px) {
+        .maf-v2 .nav-pills { border-right: none; margin-bottom: 20px; }
+        .maf-v2 .tab-content { border-radius: 20px; }
+    }
 
 
 section {
@@ -7885,6 +7873,54 @@ background: radial-gradient(
 ====================================================================
 
 ***/
+
+
+
+/* Container padding to prevent shadow clipping */
+.about-image-wrapper {
+    position: relative;
+    padding: 30px;
+}
+
+/* The Image Container */
+.main-image {
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.main-image img {
+    display: block;
+    width: 100%;
+    filter: saturate(1.1); /* Makes colors slightly more vibrant */
+}
+
+/* Floating Decorative Frame (The "Premium" touch) */
+.about-image-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    border: 2px solid red; /* Use your brand color here */
+    border-radius: 24px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+/* Interaction: Image and Frame move in opposite directions */
+.about-image-wrapper:hover .main-image {
+    transform: translate(-15px, -15px);
+}
+
+.about-image-wrapper:hover::after {
+    transform: translate(15px, 15px);
+    background-color: rgba(0, 123, 255, 0.02); /* Very subtle tint on hover */
+}
+
+
+
 .about-section-two {
   overflow: hidden;
 }
