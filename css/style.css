@@ -12259,6 +12259,8 @@ CONTACT Details
 .steps-block .title {
   margin-top: 30px;
   margin-bottom: 15px;
+  font-size: 16PX;
+  line-height: 25px;
 }
 .steps-block .text {
   font-size: 14.77px;
