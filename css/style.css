@@ -5466,6 +5466,7 @@ Section Title
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
+  color: var(--theme-color-white);
 }
 .sec-title .sub-title.style-red {
   background-color: var(--theme-color6);
@@ -16469,10 +16470,10 @@ CONTACT Details
   overflow: hidden;
   position: relative;
   z-index: 1;
-  background-color: var(--theme-color4);
+  background-color: var(--theme-color-black);
 }
 .faq-section .sec-title .text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28.8px;
 }
 .faq-section .image-column .inner-column {
@@ -16521,11 +16522,11 @@ CONTACT Details
   border: none;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: #0f2727;
+  background-color: var(--theme-color2);
   overflow: hidden;
 }
 .faq-accordion .accordion .accordion-item .accordion-header button {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   font-weight: 700;
   -webkit-box-shadow: none;
@@ -16541,13 +16542,13 @@ CONTACT Details
   padding: 30px;
 }
 .faq-accordion .accordion .accordion-item .accordion-body .text {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 30px;
   margin: 0;
   color: rgba(var(--theme-color-white-rgb), 0.52);
 }
 .faq-accordion .accordion .accordion-button {
-  background-color: #00715d;
+  background-color: var(--theme-color2);
 }
 .faq-accordion .accordion .accordion-button::after {
   display: none;
@@ -17526,7 +17527,7 @@ CONTACT Details
   font-weight: 700;
 }
 .processing-section .sec-text a {
-  color: #0c6460;
+  color: var(--theme-color1);
   border-bottom: 1px solid;
   line-height: 20px;
 }
@@ -17555,7 +17556,7 @@ CONTACT Details
   line-height: 66px;
   margin-bottom: 30px;
   color: transparent;
-  -webkit-text-stroke: 1px var(--theme-color-dark);
+  -webkit-text-stroke: 1px var(--theme-color1);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -17570,7 +17571,7 @@ CONTACT Details
   border: none;
 }
 .processing-block .inner-box:hover .number {
-  color: var(--theme-color-dark);
+  color: var(--theme-color1);
 }
 @media (max-width: 767.98px) {
   .processing-block .inner-box {
