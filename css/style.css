@@ -18398,7 +18398,7 @@ CONTACT Details
 }
 
 .footer-style-one {
-  background-color: var(--theme-color4);
+  background-color: var(--theme-color2);
   overflow: hidden;
 }
 .footer-style-one .outer-box {
@@ -18465,6 +18465,7 @@ CONTACT Details
   width: 110px;
   position: relative;
   z-index: 1;
+  background-color:var(--theme-color-white) ;
   border-right: 2px solid rgba(169, 167, 167, 0.188);
 }
 .footer-style-one .footer-left .logo {
@@ -18503,7 +18504,7 @@ CONTACT Details
   }
 }
 .footer-style-one .right-column {
-  background-color: #d4f25a;
+  background-color: var(--theme-color1);
   padding: 30px;
   position: relative;
   z-index: 1;
